@@ -62,7 +62,7 @@ body {
 }
 header {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	margin: 50px 0
 }
 section {
@@ -205,6 +205,11 @@ input[type="submit"]:hover{
 
 /*PROJETS*/
 
+.portfolio {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* Mise en page de la galerie */
 .portfolio-container {
     display: flex;
@@ -237,13 +242,13 @@ input[type="submit"]:hover{
 
 .project-logo-kasa {
     width: 50%;
-    height: 20%;
+    height: 13%;
     padding-top: 10%;
 }
 
 .project-logo-grimoire {
-    width: 55%;
-    height: 14%;
+    width: 70%;
+    height: 12%;
     padding-top: 10%;
 }
 
@@ -318,6 +323,17 @@ input[type="submit"]:hover{
 
 .github-link:hover {
     text-decoration: underline;
+    color: indigo;
+}
+
+.github-link-carducci:hover {
+    text-decoration: underline;
+    color: indigo;
+}
+
+.github-link-grimoire:hover {
+    text-decoration: underline;
+    color: indigo;
 }
 
 
@@ -511,4 +527,191 @@ h3 {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+}
+
+/* Alignement des éléments dans les boîtes des projets */
+.portfolio-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Assure un espace cohérent */
+    text-align: center;
+    height: 100%;
+    padding: 1rem;
+}
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Un espacement harmonieux */
+}
+
+/* Alignement des icônes dans la section contact */
+.contact-icon {
+    margin-right: 0.5rem;
+    vertical-align: middle; /* Aligne les icônes avec le texte */
+    font-size: 1.5rem; /* Taille adaptée */
+    color: indigo; /* Harmonisation de la couleur */
+}
+
+/* Typographie et lisibilité */
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: #333; /* Couleur de texte agréable */
+    line-height: 1.6; /* Lisibilité améliorée */
+}
+
+/* Amélioration des couleurs et contrastes */
+.github-link:hover {
+    text-decoration: underline;
+    color: darkblue; /* Accentuation discrète */
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #introduction {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #introduction img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .portfolio-box {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        width: 90%;
+        font-size: 1.2em;
+    }
+
+    .logogit {
+        height: 100%;
+        width: 70%;
+    }
+
+    .nav{
+        padding-top: 15%;
+    }
+
+    .services{
+        padding: 4%;
+    }
+
+    .services-box p {
+        font-size: 120%;
+        
+    }
+
+    #introduction {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+/* Responsiveness: Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        justify-content: space-around;
+    }
+    body {
+        margin: 2%;
+    }
+    h1 span {
+        font-size: 125%;
+    }
+    nav ul {
+        gap: 0;
+    }
+
+    #introduction img {
+        width: 80%;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .portfolio-box {
+        max-width: 48%;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    #contact {
+        font-size: 1.4em;
+    }
+}
+
+/* Harmonisation des sections */
+section {
+    padding: 2rem 0; /* Espacement uniforme */
+    background-color: #f9f9f9; /* Couleur de fond douce */
+}
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Uniformisation de la hauteur des boîtes */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    
+}
+
+.portfolio-box {
+    height: 100%; /* Ajuste automatiquement en fonction du contenu le plus haut */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacement cohérent entre les parties */
+}
+
+/* Uniformisation de la hauteur des boîtes */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.portfolio-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 470px; /* Hauteur uniforme pour toutes les boîtes */
+    max-width: 300px; /* Largeur fixe pour les boîtes */
+    box-sizing: border-box;
 }
